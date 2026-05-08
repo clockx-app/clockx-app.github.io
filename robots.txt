@@ -1,0 +1,5 @@
+# robots.txt for ClockX on GitHub Pages
+User-agent: *
+Allow: /
+
+Sitemap: https://clockx-app.github.io/sitemap.xml

@@ -1,0 +1,1 @@
+{"text_string":"# robots.txt for ClockX on GitHub Pages\nUser-agent: *\nAllow: /\n\nSitemap: https://clockx-app.github.io/sitemap.xml\n"}

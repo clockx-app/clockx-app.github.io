@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B5FFF"/>
+      <stop offset="100%" stop-color="#0A66FF"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.08)"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#032e7a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1040" cy="90" r="110" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="150" cy="560" r="160" fill="rgba(255,255,255,0.10)"/>
+
+  <!-- Card -->
+  <g filter="url(#shadow)">
+    <rect x="140" y="130" rx="24" ry="24" width="920" height="370" fill="url(#card)" stroke="rgba(255,255,255,0.25)"/>
+  </g>
+
+  <!-- Logo -->
+  <g transform="translate(190,210)">
+    <defs>
+      <linearGradient id="logoG" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#0B5FFF"/>
+        <stop offset="100%" stop-color="#0A66FF"/>
+      </linearGradient>
+    </defs>
+    <circle cx="0" cy="0" r="60" fill="url(#logoG)" stroke="white" stroke-opacity="0.4" stroke-width="2"/>
+    <line x1="0" y1="-20" x2="0" y2="8" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="8" x2="32" y2="24" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title and subtitle -->
+  <g font-family="Segoe UI, Roboto, Arial, sans-serif" fill="#ffffff">
+    <text x="290" y="235" font-size="56" font-weight="800">ClockX for Windows</text>
+    <text x="290" y="285" font-size="26" fill="rgba(255,255,255,0.9)">Free desktop clock with alarms, timers, world clocks and custom skins</text>
+  </g>
+
+  <!-- Bullets -->
+  <g font-family="Segoe UI, Roboto, Arial, sans-serif" fill="#ffffff" font-size="22">
+    <g transform="translate(290,330)">
+      <circle cx="0" cy="-8" r="6" fill="#36d399"/>
+      <text x="18" y="0">Lightweight and safe — official installer from clocx.net</text>
+    </g>
+    <g transform="translate(290,370)">
+      <circle cx="0" cy="-8" r="6" fill="#36d399"/>
+      <text x="18" y="0">Customizable analog/digital skins and on-top desktop mode</text>
+    </g>
+    <g transform="translate(290,410)">
+      <circle cx="0" cy="-8" r="6" fill="#36d399"/>
+      <text x="18" y="0">Alarms, timers, and multi-timezone world clock</text>
+    </g>
+  </g>
+
+  <!-- CTA strip -->
+  <g transform="translate(290,455)">
+    <rect x="0" y="-42" rx="12" ry="12" width="520" height="64" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.35)"/>
+    <text x="20" y="0" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff">Download ClockX 1.6.0 (Windows x64)</text>
+  </g>
+
+  <!-- Badge -->
+  <g transform="translate(190,160)">
+    <rect x="0" y="0" rx="10" ry="10" width="220" height="36" fill="rgba(255,255,255,0.22)"/>
+    <text x="16" y="24" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="700" font-size="18" fill="#ffffff">LIGHTWEIGHT • SAFE • CUSTOM</text>
+  </g>
+</svg>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClockX for Windows — Free Desktop Clock, Alarms & Timers</title>
+  <meta name="description" content="Download ClockX for Windows — a lightweight desktop clock with alarms, timers, world clock and custom skins. Safe official installer, step-by-step install guide and support.">
+  <link rel="canonical" href="https://clockx-app.github.io/">
+
+  <!-- Open Graph (og-image will be added after pages) -->
+  <meta property="og:title" content="ClockX for Windows — Free Desktop Clock, Alarms & Timers">
+  <meta property="og:description" content="Download ClockX: a compact desktop clock with alarms, timers, world clocks and skins. Safe installer and easy setup for Windows 10/11.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clockx-app.github.io/">
+  <meta property="og:image" content="https://clockx-app.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="last-modified" content="">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --surface:#f7f9fc;
+      --text:#0b1220;
+      --muted:#566176;
+      --primary:#0B5FFF; /* blue */
+      --accent:#0A66FF;
+      --success:#0ea96e;
+      --danger:#e04444;
+      --radius:10px;
+      --maxwidth:1100px;
+      --gap:18px;
+      --focus: 3px solid rgba(11,95,255,0.18);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:20px;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.45;
+    }
+    .container{max-width:var(--maxwidth);margin:0 auto;display:grid;grid-template-columns:1fr;gap:var(--gap)}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo svg{width:44px;height:44px}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover, nav a:focus{background:var(--surface);color:var(--text);outline:none}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:16px;padding:26px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(11,95,255,0.06), rgba(10,102,255,0.02));border:1px solid rgba(11,95,255,0.06)}
+    .kicker{font-size:14px;color:var(--primary);font-weight:700}
+    h1{margin:0;font-size:30px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;border:0;cursor:pointer;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-ghost{background:transparent;color:var(--primary);border:1px solid rgba(11,95,255,0.12)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .card{background:#fff;border-radius:12px;padding:14px;border:1px solid #eef2ff}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    main{padding:18px 0}
+    section{padding:18px 0}
+
+    footer{padding:20px 0;border-top:1px dashed #eef2ff;margin-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    small{color:var(--muted)}
+
+    /* cookie banner */
+    .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;background:#fff;border-radius:12px;padding:14px;border:1px solid rgba(11,95,255,0.06);box-shadow:0 8px 30px rgba(11,95,255,0.06);display:flex;gap:12px;align-items:center;z-index:9999}
+    .cookie-text{flex:1}
+
+    /* accessibility */
+    a:focus,button:focus{outline:none;box-shadow:var(--focus);border-radius:8px}
+
+    /* responsive */
+    @media(max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      h1{font-size:26px}
+    }
+    @media(max-width:640px){
+      body{padding:12px}
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:10px}
+      footer{flex-direction:column;align-items:flex-start;gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- SVG icon -->
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ClockX logo">
+            <circle cx="12" cy="12" r="10" fill="url(#g)" />
+            <path d="M12 7v6l4 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0B5FFF"/>
+                <stop offset="1" stop-color="#0A66FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <div style="font-weight:800">ClockX</div>
+          <div style="font-size:12px;color:var(--muted)">Free Desktop Clock for Windows</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="/index.html">Home</a>
+        <a href="/Download.html">Download</a>
+        <a href="/Install.html">Install</a>
+        <a href="/Features.html">Features</a>
+        <a href="/Help.html">Help</a>
+        <a href="/Privacy.html">Privacy</a>
+        <a href="/Comparison.html">Comparison</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="kicker">LIGHTWEIGHT • SAFE • CUSTOMIZABLE</div>
+          <h1 id="hero-title">ClockX for Windows — Clean desktop clock, alarms and timers</h1>
+          <p class="lead">ClockX brings a simple, customizable clock to your desktop with alarms, timers, world clocks and skins. Fast, low memory and easy to install on Windows 10/11 (x64).</p>
+
+          <div class="actions" role="group" aria-label="Primary actions">
+            <a class="btn btn-primary" href="https://www.clocx.net/files/ClocX160_x64.exe" id="downloadTop" data-file="ClocX160_x64.exe" onclick="handleDownload(event,'ClocX160_x64.exe','https://www.clocx.net/files/ClocX160_x64.exe')" rel="noopener noreferrer">Download ClockX 1.6.0 for Windows</a>
+            <a class="btn btn-ghost" href="/Install.html">How to Install</a>
+          </div>
+        </div>
+
+        <div class="grid" aria-hidden="true">
+          <div class="card">
+            <h3>Alarms & Timers</h3>
+            <div class="muted">Multiple alarms, recurring schedules and customizable tones.</div>
+          </div>
+          <div class="card">
+            <h3>World Clock</h3>
+            <div class="muted">Track multiple timezones at a glance — perfect for remote teams.</div>
+          </div>
+          <div class="card">
+            <h3>Custom Skins</h3>
+            <div class="muted">Choose analog or digital skins and personalize colors and size.</div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="why-title">
+        <h2 id="why-title">Why choose ClockX?</h2>
+        <p class="muted">ClockX is focused on speed, clarity and reliability — a tiny utility that stays out of your way while giving flexible time tools on the desktop.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px">
+          <div class="card"><h3>Lightweight</h3><div class="muted">Small installer, minimal RAM usage.</div></div>
+          <div class="card"><h3>Safe</h3><div class="muted">Official installer is hosted on clocx.net. No hidden toolbars.</div></div>
+          <div class="card"><h3>Offline Installer</h3><div class="muted">Single .exe installer for quick deployment.</div></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="quick-info">
+        <h2 id="quick-info">Quick facts</h2>
+        <ul class="muted">
+          <li>Version: 1.6.0 (ClocX160_x64.exe)</li>
+          <li>Supported OS: Windows 10, Windows 11 (64‑bit)</li>
+          <li>Installer: https://www.clocx.net/files/ClocX160_x64.exe (official)</li>
+          <li>License: Freeware</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="safety">
+        <h2 id="safety">Safety & Transparency</h2>
+        <p class="muted">This site is an informational mirror linking to the official ClocX installer hosted on clocx.net. We do not modify installers. Please verify checksums where available. If you have concerns about malware, scan the downloaded file with your antivirus.</p>
+        <p class="muted"><strong>Affiliate disclosure:</strong> This page may use partner links. We aim to be transparent and list the official file location above.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <small>© <span id="year"></span> ClockX — Free Desktop Clock. Not affiliated with any third party. Hosted on GitHub Pages.</small>
+      </div>
+      <div style="text-align:right">
+        <small>Last updated: <span id="lastModified">—</span></small>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- SVG symbols (hidden) -->
+  <svg style="display:none;">
+    <symbol id="icon-clock" viewBox="0 0 24 24"><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2l7 3v5c0 5-3.8 9-7 10-3.2-1-7-5-7-10V5l7-3z" stroke="currentColor" stroke-width="1.2" fill="none"/></symbol>
+  </svg>
+
+  <script>
+    // --- Configuration ---
+    const GA_MEASUREMENT_ID = 'G-DDBED4D1DJ';
+    const DOWNLOAD_FILE = 'ClocX160_x64.exe';
+    const DOWNLOAD_URL = 'https://www.clocx.net/files/ClocX160_x64.exe';
+
+    // Utility: load GA4 dynamically after consent
+    function loadGA(){
+      if(window.gtagLoaded) return;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID, { 'send_page_view': true });
+      const s = document.createElement('script');
+      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      s.onload = ()=>{window.gtagLoaded = true; console.info('GA loaded')};
+      document.head.appendChild(s);
+    }
+
+    // Download click handler: fire gtag event only if GA loaded (consent granted)
+    function handleDownload(e, fileName, url){
+      // allow normal navigation if middle-click or ctrl/cmd+click
+      if(e.ctrlKey || e.metaKey || e.button === 1) return;
+      e.preventDefault();
+      const consent = localStorage.getItem('clockx_cookie_consent');
+      if(consent === 'accepted' && typeof gtag === 'function'){
+        try{ gtag('event','file_download',{event_category:'downloads', event_label:fileName, file_url:url}); }catch(err){console.warn(err)}
+        // small delay to allow event to fire
+        window.location.href = url;
+      } else if(consent === 'accepted' && !window.gtagLoaded){
+        // load GA then send event
+        loadGA();
+        // wait until loaded
+        const to = setInterval(()=>{
+          if(window.gtagLoaded){
+            try{ gtag('event','file_download',{event_category:'downloads', event_label:fileName, file_url:url}); }catch(_){}
+            clearInterval(to);
+            window.location.href = url;
+          }
+        },100);
+        // fallback after 1s
+        setTimeout(()=>{ window.location.href = url; },1200);
+      } else {
+        // no consent — proceed without analytics
+        window.location.href = url;
+      }
+    }
+
+    // Cookie banner logic
+    function showCookieBanner(){
+      if(sessionStorage.getItem('clockx_cookie_dismissed')) return;
+      const banner = document.createElement('div');
+      banner.className = 'cookie-banner';
+      banner.setAttribute('role','dialog');
+      banner.setAttribute('aria-live','polite');
+      banner.innerHTML = `
+        <div class="cookie-text">
+          <strong>We use cookies for analytics.</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">By accepting analytics cookies you help us improve the site. Choose Accept to enable Google Analytics (optional).</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+          <div style="display:flex;gap:8px">
+            <button id="cookieAccept" class="btn btn-primary">Accept</button>
+            <button id="cookieDecline" class="btn btn-ghost">Decline</button>
+          </div>
+          <button id="cookieClose" style="background:transparent;border:0;color:var(--muted);font-size:13px">Close</button>
+        </div>`;
+      document.body.appendChild(banner);
+      document.getElementById('cookieAccept').addEventListener('click',()=>{
+        localStorage.setItem('clockx_cookie_consent','accepted');
+        loadGA();
+        banner.remove();
+      });
+      document.getElementById('cookieDecline').addEventListener('click',()=>{
+        localStorage.setItem('clockx_cookie_consent','declined');
+        banner.remove();
+      });
+      document.getElementById('cookieClose').addEventListener('click',()=>{
+        sessionStorage.setItem('clockx_cookie_dismissed','1');
+        banner.remove();
+      });
+    }
+
+    // Initialize page UI
+    document.addEventListener('DOMContentLoaded',()=>{
+      // set year and last modified
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const lm = document.lastModified || new Date().toISOString();
+      document.getElementById('lastModified').textContent = lm;
+      // set meta last-modified
+      const meta = document.querySelector('meta[name="last-modified"]');
+      if(meta) meta.setAttribute('content', lm);
+
+      // cookie banner - show only if no explicit consent
+      const consent = localStorage.getItem('clockx_cookie_consent');
+      if(!consent){ showCookieBanner(); }
+      else if(consent === 'accepted'){ loadGA(); }
+
+      // Accessibility: allow Enter on download anchor
+      const dl = document.getElementById('downloadTop');
+      dl.addEventListener('keydown', function(e){ if(e.key === 'Enter') handleDownload(e, DOWNLOAD_FILE, DOWNLOAD_URL); });
+    });
+  </script>
+
+  <!-- Structured data: SoftwareApplication + FAQ (minimal) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ClockX",
+    "url": "https://clockx-app.github.io/",
+    "description": "ClockX is a lightweight desktop clock for Windows with alarms, timers, world clock and custom skins.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+    "softwareVersion": "1.6.0",
+    "downloadUrl": "https://www.clocx.net/files/ClocX160_x64.exe",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "ClockX Project" },
+    "potentialAction": [{"@type":"InstallAction","target":"https://clockx-app.github.io/Install.html"}]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is ClockX safe?","acceptedAnswer":{"@type":"Answer","text":"The installer linked on this site is the official ClocX installer hosted on clocx.net. We do not modify installers. Scan with your AV if you have concerns."}},
+      {"@type":"Question","name":"Which Windows versions are supported?","acceptedAnswer":{"@type":"Answer","text":"ClockX 1.6.0 supports Windows 10 and Windows 11 (64-bit)."}},
+      {"@type":"Question","name":"How do I install ClockX?","acceptedAnswer":{"@type":"Answer","text":"Download the installer and run it. Visit the Install page for a step-by-step guide."}}
+    ]
+  }
+  </script>
+
+</body>
+</html>

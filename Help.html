@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClockX Help Center — Troubleshooting, FAQ, and Uninstall Guide</title>
+  <meta name="description" content="Need help with ClockX on Windows? Troubleshooting tips, FAQ, and a clean uninstall guide. Safe official download and install instructions.">
+  <link rel="canonical" href="https://clockx-app.github.io/Help.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ClockX Help Center — Troubleshooting, FAQ, and Uninstall Guide">
+  <meta property="og:description" content="Fix common issues, read FAQ, and learn how to uninstall ClockX on Windows 10/11.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clockx-app.github.io/Help.html">
+  <meta property="og:image" content="https://clockx-app.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="last-modified" content="">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --surface:#f7f9fc;
+      --text:#0b1220;
+      --muted:#566176;
+      --primary:#0B5FFF;
+      --accent:#0A66FF;
+      --success:#0ea96e;
+      --danger:#e04444;
+      --radius:10px;
+      --maxwidth:1100px;
+      --gap:18px;
+      --focus:3px solid rgba(11,95,255,0.18);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;padding:20px;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.45}
+    .container{max-width:var(--maxwidth);margin:0 auto;display:grid;grid-template-columns:1fr;gap:var(--gap)}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo svg{width:44px;height:44px}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover, nav a:focus{background:var(--surface);color:var(--text);outline:none}
+
+    main{padding:18px 0}
+    .hero{display:grid;grid-template-columns:1fr;gap:16px;padding:26px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(11,95,255,0.06), rgba(10,102,255,0.02));border:1px solid rgba(11,95,255,0.06)}
+    h1{margin:0;font-size:30px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .kicker{font-size:14px;color:var(--primary);font-weight:700}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border-radius:12px;border:0;cursor:pointer;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--primary);color:#fff}
+    .btn-ghost{background:transparent;color:var(--primary);border:1px solid rgba(11,95,255,0.12)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .card{background:#fff;border-radius:12px;padding:14px;border:1px solid #eef2ff}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    details{background:#fff;border:1px solid #eef2ff;border-radius:12px;padding:12px}
+    details summary{font-weight:700;cursor:pointer}
+    details p{margin:8px 0 0;color:var(--muted)}
+
+    ol.steps{counter-reset: step;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+    ol.steps li{background:#fff;border:1px solid #eef2ff;border-radius:12px;padding:14px;position:relative}
+    ol.steps li h3{margin:0 0 6px;font-size:18px}
+    ol.steps li::before{counter-increment: step;content: counter(step);position:absolute;left:-10px;top:-10px;background:var(--primary);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;box-shadow:0 6px 18px rgba(11,95,255,0.25)}
+
+    .notice{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px dashed rgba(11,95,255,0.3);border-radius:12px;background:#f5f8ff}
+
+    footer{padding:20px 0;border-top:1px dashed #eef2ff;margin-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    small{color:var(--muted)}
+
+    .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;background:#fff;border-radius:12px;padding:14px;border:1px solid rgba(11,95,255,0.06);box-shadow:0 8px 30px rgba(11,95,255,0.06);display:flex;gap:12px;align-items:center;z-index:9999}
+    .cookie-text{flex:1}
+
+    a:focus,button:focus{outline:none;box-shadow:var(--focus);border-radius:8px}
+
+    @media(max-width:900px){ h1{font-size:26px} .faq{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:640px){ body{padding:12px} header{flex-direction:column;align-items:flex-start;gap:10px} .grid{grid-template-columns:1fr} footer{flex-direction:column;align-items:flex-start;gap:8px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ClockX logo">
+            <circle cx="12" cy="12" r="10" fill="url(#g)" />
+            <path d="M12 7v6l4 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0B5FFF"/>
+                <stop offset="1" stop-color="#0A66FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <div style="font-weight:800">ClockX</div>
+          <div style="font-size:12px;color:var(--muted)">Free Desktop Clock for Windows</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="/index.html">Home</a>
+        <a href="/Download.html">Download</a>
+        <a href="/Install.html">Install</a>
+        <a href="/Features.html">Features</a>
+        <a href="/Help.html" aria-current="page">Help</a>
+        <a href="/Privacy.html">Privacy</a>
+        <a href="/Comparison.html">Comparison</a>
+      </nav>
+    </header>
+
+    <main>
+      <nav aria-label="Breadcrumb" class="muted" style="font-size:13px">
+        <a href="/index.html">Home</a> › <span>Help</span>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="kicker">TROUBLESHOOT • FAQ • UNINSTALL</div>
+          <h1 id="hero-title">ClockX Help Center</h1>
+          <p class="lead">Fix common issues, read quick answers, and learn how to cleanly uninstall ClockX. If you need the installer, use the official link below.</p>
+          <div class="actions" role="group" aria-label="Primary actions">
+            <a class="btn btn-primary" href="https://www.clocx.net/files/ClocX160_x64.exe" id="downloadTop" onclick="handleDownload(event,'ClocX160_x64.exe','https://www.clocx.net/files/ClocX160_x64.exe')" rel="noopener noreferrer">Download Installer</a>
+            <a class="btn btn-ghost" href="/Install.html">How to Install</a>
+          </div>
+          <div class="notice" style="margin-top:12px">
+            <svg width="20" height="20" style="color:var(--primary);flex:0 0 auto" aria-hidden="true"><use href="#icon-shield"/></svg>
+            <div class="muted">We link to the official host (clocx.net). We do not modify or repackage installers.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="troubleshooting" aria-labelledby="trouble-title">
+        <h2 id="trouble-title">Troubleshooting</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Installer blocked by SmartScreen</h3>
+            <p class="muted">Click “More info” → “Run anyway” if you trust the official source. Ensure you downloaded from the link above.</p>
+          </div>
+          <div class="card">
+            <h3>Clock not visible on desktop</h3>
+            <p class="muted">Check if the app is running in the tray. Toggle always‑on‑top and transparency in settings; move the clock to a visible monitor.</p>
+          </div>
+          <div class="card">
+            <h3>Alarms don’t ring</h3>
+            <p class="muted">Verify volume and output device, check Do Not Disturb/Focus Assist, and ensure the app is allowed to play sounds.</p>
+          </div>
+          <div class="card">
+            <h3>High CPU usage</h3>
+            <p class="muted">Try a simpler skin, disable animations, and restart the app. If it persists, reinstall using the official installer.</p>
+          </div>
+          <div class="card">
+            <h3>Start with Windows</h3>
+            <p class="muted">Enable “Start with Windows” in settings. If blocked by policy, ask your system administrator.</p>
+          </div>
+          <div class="card">
+            <h3>Wrong time zone</h3>
+            <p class="muted">Update Windows time zone settings. For extra clocks, use the World Clock feature and set the desired cities.</p>
+          </div>
+        </div>
+        <div class="actions" style="margin-top:12px">
+          <a class="btn btn-ghost" href="#uninstall">Jump to Uninstall</a>
+          <a class="btn btn-primary" href="/Features.html">Explore Features</a>
+        </div>
+      </section>
+
+      <section id="uninstall" aria-labelledby="uninstall-title">
+        <h2 id="uninstall-title">Uninstall Guide</h2>
+        <ol class="steps">
+          <li id="u1"><h3>Open Apps & Features</h3><p class="muted">Press Win+I → Apps → Installed apps (or classic Control Panel → Programs and Features).</p></li>
+          <li id="u2"><h3>Find ClockX</h3><p class="muted">Scroll the list or search for “ClockX”.</p></li>
+          <li id="u3"><h3>Uninstall</h3><p class="muted">Click Uninstall and confirm. Follow on‑screen steps until completion.</p></li>
+          <li id="u4"><h3>(Optional) Remove settings</h3><p class="muted">Delete the ClockX settings folder from your user profile if you want a fully clean slate next time.</p></li>
+        </ol>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is ClockX safe?</summary>
+            <p>The download button points to the official file on clocx.net. We do not modify or bundle adware. You can scan the file with your antivirus for extra assurance.</p>
+          </details>
+          <details>
+            <summary>Which Windows versions are supported?</summary>
+            <p>ClockX 1.6.0 supports Windows 10 and Windows 11 (64‑bit).</p>
+          </details>
+          <details>
+            <summary>How do I install ClockX?</summary>
+            <p>Download the installer, run it, and follow on‑screen steps. See the <a href="/Install.html">Install guide</a> for details.</p>
+          </details>
+          <details>
+            <summary>How do I uninstall ClockX?</summary>
+            <p>Go to Apps & Features → find ClockX → Uninstall. See the <a href="#uninstall">Uninstall Guide</a> above for step‑by‑step instructions.</p>
+          </details>
+          <details>
+            <summary>Does ClockX collect personal data?</summary>
+            <p>We only use optional analytics cookies on this website (disabled unless you accept). The app itself is a desktop utility. Read our <a href="/Privacy.html">Privacy & Safety</a> page.</p>
+          </details>
+          <details>
+            <summary>Where can I get the latest version?</summary>
+            <p>Use the official installer link below or visit our <a href="/Download.html">Download</a> page for details.</p>
+          </details>
+        </div>
+        <div class="actions" style="margin-top:12px">
+          <a class="btn btn-primary" href="https://www.clocx.net/files/ClocX160_x64.exe" onclick="handleDownload(event,'ClocX160_x64.exe','https://www.clocx.net/files/ClocX160_x64.exe')" rel="noopener noreferrer">Download Installer</a>
+          <a class="btn btn-ghost" href="/Privacy.html">Privacy & Safety</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <small>© <span id="year"></span> ClockX — Free Desktop Clock. Not affiliated with any third party. Hosted on GitHub Pages.</small>
+      </div>
+      <div style="text-align:right">
+        <small>Last updated: <span id="lastModified">—</span></small>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SVG symbols (hidden) -->
+  <svg style="display:none;">
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2l7 3v5c0 5-3.8 9-7 10-3.2-1-7-5-7-10V5l7-3z" stroke="currentColor" stroke-width="1.2" fill="none"/></symbol>
+  </svg>
+
+  <script>
+    const GA_MEASUREMENT_ID = 'G-DDBED4D1DJ';
+    const DOWNLOAD_FILE = 'ClocX160_x64.exe';
+    const DOWNLOAD_URL = 'https://www.clocx.net/files/ClocX160_x64.exe';
+
+    function loadGA(){
+      if(window.gtagLoaded) return;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID, { 'send_page_view': true });
+      const s = document.createElement('script');
+      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      s.onload = ()=>{window.gtagLoaded = true; console.info('GA loaded')};
+      document.head.appendChild(s);
+    }
+
+    function handleDownload(e, fileName, url){
+      if(e.ctrlKey || e.metaKey || e.button === 1) return; // allow new tab
+      e.preventDefault();
+      const consent = localStorage.getItem('clockx_cookie_consent');
+      if(consent === 'accepted' && typeof gtag === 'function'){
+        try{ gtag('event','file_download',{event_category:'downloads', event_label:fileName, file_url:url}); }catch(err){console.warn(err)}
+        window.location.href = url;
+      } else if(consent === 'accepted' && !window.gtagLoaded){
+        loadGA();
+        const to = setInterval(()=>{
+          if(window.gtagLoaded){
+            try{ gtag('event','file_download',{event_category:'downloads', event_label:fileName, file_url:url}); }catch(_){}
+            clearInterval(to);
+            window.location.href = url;
+          }
+        },100);
+        setTimeout(()=>{ window.location.href = url; },1200);
+      } else {
+        window.location.href = url; // proceed without analytics
+      }
+    }
+
+    function showCookieBanner(){
+      if(sessionStorage.getItem('clockx_cookie_dismissed')) return;
+      const banner = document.createElement('div');
+      banner.className = 'cookie-banner';
+      banner.setAttribute('role','dialog');
+      banner.setAttribute('aria-live','polite');
+      banner.innerHTML = `
+        <div class="cookie-text">
+          <strong>We use cookies for analytics.</strong>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Accept to enable Google Analytics (optional). You can decline and continue without analytics.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+          <div style="display:flex;gap:8px">
+            <button id="cookieAccept" class="btn btn-primary">Accept</button>
+            <button id="cookieDecline" class="btn btn-ghost">Decline</button>
+          </div>
+          <button id="cookieClose" style="background:transparent;border:0;color:var(--muted);font-size:13px">Close</button>
+        </div>`;
+      document.body.appendChild(banner);
+      document.getElementById('cookieAccept').addEventListener('click',()=>{
+        localStorage.setItem('clockx_cookie_consent','accepted');
+        loadGA();
+        banner.remove();
+      });
+      document.getElementById('cookieDecline').addEventListener('click',()=>{
+        localStorage.setItem('clockx_cookie_consent','declined');
+        banner.remove();
+      });
+      document.getElementById('cookieClose').addEventListener('click',()=>{
+        sessionStorage.setItem('clockx_cookie_dismissed','1');
+        banner.remove();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const lm = document.lastModified || new Date().toISOString();
+      document.getElementById('lastModified').textContent = lm;
+      const meta = document.querySelector('meta[name="last-modified"]');
+      if(meta) meta.setAttribute('content', lm);
+
+      const consent = localStorage.getItem('clockx_cookie_consent');
+      if(!consent){ showCookieBanner(); }
+      else if(consent === 'accepted'){ loadGA(); }
+
+      const dl = document.getElementById('downloadTop');
+      dl.addEventListener('keydown', function(e){ if(e.key === 'Enter') handleDownload(e, DOWNLOAD_FILE, DOWNLOAD_URL); });
+    });
+  </script>
+
+  <!-- Structured data: FAQPage + HowTo (Uninstall) + Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is ClockX safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. We link to the official installer hosted on clocx.net and do not modify installers."}},
+      {"@type":"Question","name":"Which Windows versions are supported?","acceptedAnswer":{"@type":"Answer","text":"ClockX 1.6.0 supports Windows 10 and Windows 11 (64-bit)."}},
+      {"@type":"Question","name":"How do I install ClockX?","acceptedAnswer":{"@type":"Answer","text":"Download ClocX160_x64.exe from the official link and run it. Follow the on-screen steps. See the Install page for details."}},
+      {"@type":"Question","name":"How do I uninstall ClockX?","acceptedAnswer":{"@type":"Answer","text":"Open Apps & Features, find ClockX, click Uninstall and confirm. See the Uninstall Guide on this page for step-by-step instructions."}},
+      {"@type":"Question","name":"Does ClockX collect personal data?","acceptedAnswer":{"@type":"Answer","text":"This website only uses optional analytics cookies (disabled unless accepted). Read the Privacy & Safety page for details."}}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"How to Uninstall ClockX on Windows",
+    "description":"Cleanly remove ClockX from Windows 10/11 using Apps & Features.",
+    "url":"https://clockx-app.github.io/Help.html#uninstall",
+    "step":[
+      {"@type":"HowToStep","name":"Open Apps & Features","url":"https://clockx-app.github.io/Help.html#u1","itemListElement":[{"@type":"HowToDirection","text":"Press Win+I → Apps → Installed apps."}]},
+      {"@type":"HowToStep","name":"Find ClockX","url":"https://clockx-app.github.io/Help.html#u2","itemListElement":[{"@type":"HowToDirection","text":"Scroll the list or search for ClockX."}]},
+      {"@type":"HowToStep","name":"Uninstall","url":"https://clockx-app.github.io/Help.html#u3","itemListElement":[{"@type":"HowToDirection","text":"Click Uninstall and confirm prompts until completion."}]},
+      {"@type":"HowToStep","name":"Remove settings (optional)","url":"https://clockx-app.github.io/Help.html#u4","itemListElement":[{"@type":"HowToTip","text":"Delete the settings folder in your user profile if you want a clean slate."}]}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://clockx-app.github.io/"},
+      {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://clockx-app.github.io/Help.html"}
+    ]
+  }
+  </script>
+</body>
+</html>
